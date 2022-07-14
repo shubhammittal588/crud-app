@@ -21,6 +21,10 @@
           </div>
 
           <div class="my-2">
+            <input type="text" name="category" id="category" class="form-control" placeholder="Category" value="{{ $post->category }}" required>
+          </div>
+
+          <div class="my-2">
             <input type="file" name="file" id="file" accept="image/*" class="form-control">
           </div>
 

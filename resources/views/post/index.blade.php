@@ -12,10 +12,6 @@
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif
-
-<label>Search</label>
-<input type="text" name="search">
-<input type="submit" name="submit">
 <div class="row g-4 mt-1">
   @forelse($posts as $key => $row)
   <div class="col-lg-4">
@@ -25,6 +21,7 @@
           <img src="{{ asset('storage/images/'.$row->image) }}" class="card-img-top img-fluid">
         </a>
         <div class="card-body">
+          <p class="btn btn-success rounded-pill btn-sm">{{ $row->category }}</p>
           <div class="card-title fw-bold text-primary h4">{{ $row->title }}</div>
           <p class="text-secondary">{{ Str::limit($row->content, 100) }}</p>
         </div>

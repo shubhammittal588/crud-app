@@ -23,6 +23,13 @@
           </div>
 
           <div class="my-2">
+            <input type="text" name="category" id="category" class="form-control @error('category') is-invalid @enderror" placeholder="Category" value="{{ old('category') }}">
+            @error('category')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+          </div>
+
+          <div class="my-2">
             <input type="file" name="file" id="file" accept="image/*" class="form-control @error('file') is-invalid @enderror">
             @error('file')
               <div class="invalid-feedback">{{ $message }}</div>
